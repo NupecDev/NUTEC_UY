@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos – Nutrisur | Nutrición Animal Uruguay</title>
+    <meta name="description" content="Portafolio completo de Nutrisur: premixes para avicultura, porcicultura, ganadería lechera, carne y mascotas NUPEC. Ahora con el respaldo de Grupo Nutec." />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="assets/vendors/agrion-icons/style.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/agrion.css" />
+    <link rel="stylesheet" href="assets/css/agrion-responsive.css" />
+
+    <style>
+        :root {
+            --ns-azul:       #013558;
+            --ns-azul-claro: #0369B2;
+            --ns-azul-hover: #024a7a;
+            --ns-gris:       #828282;
+            --ns-gris-medio: #4C4C4C;
+            --ns-blanco:     #ffffff;
+            --ns-bg-claro:   #f4f8fb;
+        }
+
+        /* ── Shared brand overrides (same as index) ── */
+        .thm-btn { background-color: var(--ns-azul) !important; color: #fff !important; border-radius: 4px !important; }
+        .thm-btn:hover { background-color: var(--ns-azul-claro) !important; }
+        .main-header__menu-box-top { background-color: var(--ns-azul) !important; }
+        .main-header__contact-list li p, .main-header__contact-list li p a { color: rgba(255,255,255,0.85) !important; }
+        .main-header__social a { color: rgba(255,255,255,0.7) !important; }
+        .main-header__menu-box-bottom, .stricky-header { background-color: #fff !important; border-bottom: 2px solid var(--ns-azul) !important; }
+        .main-menu__list > li > a { color: var(--ns-azul) !important; font-weight: 600 !important; }
+        .main-menu__list > li > a:hover, .main-menu__list > li.current > a { color: var(--ns-azul-claro) !important; }
+        .main-menu__btn { background-color: var(--ns-azul-claro) !important; }
+        .main-header__phone-number a { color: var(--ns-azul) !important; }
+        .main-header__call-inner { background-color: var(--ns-azul) !important; }
+        .section-title__tagline { color: var(--ns-azul-claro) !important; }
+        .section-title__title { color: var(--ns-azul) !important; }
+        .preloader { background-color: var(--ns-azul) !important; }
+        .mobile-nav__content { background-color: var(--ns-azul) !important; }
+        .mobile-nav__close { color: #fff !important; }
+        .scroll-to-top { background-color: var(--ns-azul-claro) !important; }
+        .site-footer__top { background-color: var(--ns-azul) !important; }
+        .site-footer__bottom { background-color: #011e33 !important; }
+        .footer-widget__title { color: #fff !important; }
+        .footer-widget__about-text, .footer-widget__links-list li a, .footer-widget__Contact-list li p a { color: rgba(255,255,255,0.75) !important; }
+        .footer-widget__links-list li a:hover { color: var(--ns-azul-claro) !important; }
+        .footer-widget__Contact-btn { background-color: var(--ns-azul-claro) !important; }
+        .site-footer__bottom-text, .site-footer__bottom-text a { color: rgba(255,255,255,0.65) !important; }
+        .ns-logo-text { font-family: 'DM Sans',sans-serif; font-weight: 700; font-size: 26px; color: var(--ns-azul); }
+        .ns-logo-text span { color: var(--ns-azul-claro); }
+        .nutec-strip { background: #f0f6fb; border-top: 1px solid #cde0f0; padding: 10px 0; text-align: center; font-size: 12px; color: var(--ns-gris); }
+        .nutec-strip strong { color: var(--ns-azul); }
+        .nutec-strip a { color: var(--ns-azul-claro); text-decoration: none; }
+
+        /* ── Page header Nutrisur azul ── */
+        .page-header { position: relative; }
+        .page-header-bg { background-color: var(--ns-azul); }
+        .page-header__inner h2 { color: #fff; }
+        .thm-breadcrumb li a, .thm-breadcrumb li span, .thm-breadcrumb li { color: rgba(255,255,255,0.75) !important; }
+
+        /* ── Product sections layout ── */
+        .product-section {
+            padding: 80px 0;
+            scroll-margin-top: 120px;
+        }
+        .product-section:nth-child(even) { background-color: var(--ns-bg-claro); }
+
+        /* ── Section anchor labels ── */
+        .product-section__anchor-label {
+            display: inline-block;
+            background: var(--ns-azul);
+            color: #fff;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 4px 14px;
+            border-radius: 3px;
+            margin-bottom: 14px;
+        }
+
+        /* ── Product card ── */
+        .product-card {
+            background: #fff;
+            border: 1px solid #e0e9f0;
+            border-radius: 6px;
+            padding: 24px 20px;
+            margin-bottom: 24px;
+            border-top: 3px solid var(--ns-azul);
+            transition: box-shadow 0.25s, transform 0.2s;
+        }
+        .product-card:hover {
+            box-shadow: 0 8px 24px rgba(1,53,88,0.12);
+            transform: translateY(-3px);
+        }
+        .product-card__name {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 17px;
+            color: var(--ns-azul);
+            margin-bottom: 6px;
+        }
+        .product-card__subtitle {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--ns-azul-claro);
+            margin-bottom: 10px;
+        }
+        .product-card__text {
+            font-size: 14px;
+            color: var(--ns-gris-medio);
+            line-height: 1.65;
+            margin-bottom: 14px;
+        }
+        .product-card__stages {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+        .stage-pill {
+            background: var(--ns-bg-claro);
+            border: 1px solid #cde0f0;
+            color: var(--ns-azul);
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+        .product-card__badge {
+            display: inline-block;
+            background: var(--ns-azul-claro);
+            color: #fff;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 2px 10px;
+            border-radius: 3px;
+            margin-bottom: 8px;
+        }
+        .product-card__badge.badge-proceso {
+            background: #e8a020;
+        }
+        .product-card__cta {
+            display: inline-block;
+            color: var(--ns-azul-claro);
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .product-card__cta:hover { border-color: var(--ns-azul-claro); }
+        .product-card__cta i { margin-left: 4px; }
+
+        /* ── Section intro ── */
+        .section-intro {
+            margin-bottom: 48px;
+        }
+        .section-intro p {
+            font-size: 16px;
+            color: var(--ns-gris-medio);
+            max-width: 640px;
+        }
+
+        /* ── NUPEC card special ── */
+        .nupec-band {
+            background: var(--ns-azul);
+            border-radius: 8px;
+            padding: 40px;
+            color: #fff;
+        }
+        .nupec-band h3 { color: #fff; font-size: 28px; font-weight: 700; margin-bottom: 12px; }
+        .nupec-band p { color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.7; margin-bottom: 20px; }
+        .nupec-line-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: rgba(255,255,255,0.85);
+        }
+        .nupec-line-item:last-child { border-bottom: none; }
+        .nupec-line-item i { color: #4da6e8; margin-top: 2px; flex-shrink: 0; }
+
+        /* ── Tab nav for sections ── */
+        .products-nav {
+            background: var(--ns-azul);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .products-nav__list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            overflow-x: auto;
+        }
+        .products-nav__list li a {
+            display: block;
+            padding: 16px 22px;
+            color: rgba(255,255,255,0.75);
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: color 0.2s, background 0.2s;
+            border-bottom: 3px solid transparent;
+        }
+        .products-nav__list li a:hover,
+        .products-nav__list li a.active {
+            color: #fff;
+            border-bottom-color: #4da6e8;
+        }
+    </style>
+</head>
+
+<body class="custom-cursor">
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+    <div class="preloader"><div class="preloader__image"></div></div>
+
+    <div class="page-wrapper">
+
+        <!-- HEADER (mismo que index) -->
+        <header class="main-header">
+            <div class="main-header__wrapper">
+                <div class="main-header__wrapper-inner">
+                    <div class="main-header__logo">
+                        <a href="index.html"><span class="ns-logo-text">nutri<span>sur</span></span></a>
+                    </div>
+                    <div class="main-header__menu-box">
+                        <div class="main-header__menu-box-top">
+                            <ul class="list-unstyled main-header__contact-list">
+                                <li>
+                                    <div class="icon"><i class="icon-email"></i></div>
+                                    <div class="text"><p><a href="mailto:info@nutrisur.com.uy">info@nutrisur.com.uy</a></p></div>
+                                </li>
+                                <li>
+                                    <div class="icon"><i class="icon-pin"></i></div>
+                                    <div class="text"><p>Ruta 5 Km 37, Juanicó, Uruguay</p></div>
+                                </li>
+                            </ul>
+                            <div class="main-header__social">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/company/gruponutec" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="main-header__menu-box-bottom">
+                            <nav class="main-menu">
+                                <div class="main-menu__wrapper">
+                                    <div class="main-menu__wrapper-inner">
+                                        <div class="main-menu__left">
+                                            <div class="main-menu__main-menu-box">
+                                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                                <ul class="main-menu__list">
+                                                    <li><a href="index.html">Inicio</a></li>
+                                                    <li><a href="nosotros.html">Nosotros</a></li>
+                                                    <li class="current dropdown">
+                                                        <a href="productos.html">Productos</a>
+                                                        <ul class="shadow-box">
+                                                            <li><a href="#aves">Avicultura</a></li>
+                                                            <li><a href="#porcinos">Porcicultura</a></li>
+                                                            <li><a href="#bovinos">Ganadería Lechera</a></li>
+                                                            <li><a href="#carne">Ganadería de Carne</a></li>
+                                                            <li><a href="#mascotas">Mascotas – NUPEC</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="contacto.html">Contacto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="main-menu__right">
+                                            <div class="main-menu__search-cart-btn-box">
+                                                <div class="main-menu__btn-box">
+                                                    <a href="contacto.html" class="thm-btn main-menu__btn">Consultar <i class="icon-right-arrow"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="main-header__phone-contact-box">
+                        <div class="main-header__phone-number"><a href="tel:+59843358522">(+598) 4335 8522</a></div>
+                        <div class="main-header__call-box">
+                            <div class="main-header__call-inner">
+                                <div class="main-header__call-icon"><span class="fas fa-phone"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div>
+        </div>
+
+        <!-- PAGE HEADER -->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)"></div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><span>/</span></li>
+                        <li>Productos</li>
+                    </ul>
+                    <h2>Portafolio de Productos</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS NAV BAR -->
+        <nav class="products-nav">
+            <ul class="products-nav__list container">
+                <li><a href="#aves">🐔 Avicultura</a></li>
+                <li><a href="#porcinos">🐷 Porcicultura</a></li>
+                <li><a href="#bovinos">🐄 Ganadería Lechera</a></li>
+                <li><a href="#carne">🥩 Ganadería de Carne</a></li>
+                <li><a href="#feed">⚙️ Feed Solutions</a></li>
+                <li><a href="#mascotas">🐾 Mascotas</a></li>
+            </ul>
+        </nav>
+
+        <!-- ═══════════════════════════════════
+             §1 · AVICULTURA
+        ════════════════════════════════════ -->
+        <section class="product-section" id="aves">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="product-section__anchor-label">Avicultura</span>
+                    <div class="section-title text-left">
+                        <span class="section-title__tagline">Premixes vitamínico-minerales</span>
+                        <h2 class="section-title__title">Soluciones para aves</h2>
+                        <div class="section-title__icon"><img src="assets/images/icon/section-title-icon-1.png" alt=""></div>
+                    </div>
+                    <p>Premixes con oligoelementos en forma orgánica de alta biodisponibilidad. Cubrimos todas las etapas del ciclo productivo tanto para pollos parrilleros como para gallinas ponedoras y reproductoras.</p>
+                </div>
+                <div class="row">
+                    <!-- Nutribroiler -->
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card">
+                            <div class="product-card__badge">Línea Nutrisur</div>
+                            <h3 class="product-card__name">Nutribroiler</h3>
+                            <p class="product-card__subtitle">Premix vitamínico · Pollo parrillero</p>
+                            <p class="product-card__text">Línea completa para pollos parrilleros. Cubre los requerimientos de vitaminas y oligoelementos en cada etapa del ciclo con mineralización orgánica. Dosis: 2,5 kg/tonelada.</p>
+                            <div class="product-card__stages">
+                                <span class="stage-pill">Preiniciador · Sem. 1</span>
+                                <span class="stage-pill">Iniciador · Sem. 2–3</span>
+                                <span class="stage-pill">Crecimiento · Sem. 4–5</span>
+                                <span class="stage-pill">Terminador · +5 sem.</span>
+                            </div>
+                            <a href="contacto.html?ficha=nutribroiler" class="product-card__cta">Solicitar ficha técnica <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                    <!-- Nutrilayer -->
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card">
+                            <div class="product-card__badge">Línea Nutrisur</div>
+                            <h3 class="product-card__name">Nutrilayer</h3>
+                            <p class="product-card__subtitle">Premix vitamínico · Gallina ponedora</p>
+                            <p class="product-card__text">Premix con minerales orgánicos para todas las etapas de aves de postura. Vitaminas altamente estables al proceso de elaboración del pienso. Dosis: 2,5 kg/tonelada.</p>
+                            <div class="product-card__stages">
+                                <span class="stage-pill">Bebé · 0–4 sem.</span>
+                                <span class="stage-pill">Recría · 5–18 sem.</span>
+                                <span class="stage-pill">Postura · +18 sem.</span>
+                                <span class="stage-pill">Reproductora</span>
+                            </div>
+                            <a href="contacto.html?ficha=nutrilayer" class="product-card__cta">Solicitar ficha técnica <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                    <!-- Postura Premium + Nutripostura -->
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card">
+                            <div class="product-card__badge">Línea Nutrisur</div>
+                            <h3 class="product-card__name">Postura Premium & Nutripostura</h3>
+                            <p class="product-card__subtitle">Complementos para aves de postura</p>
+                            <p class="product-card__text">Líneas complementarias para producción de huevo. Formulaciones específicas para máximo rendimiento productivo en gallinas ponedoras comerciales.</p>
+                            <a href="contacto.html?ficha=postura" class="product-card__cta">Consultar disponibilidad <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                    <!-- Premezclas Euro-Nutec en registro -->
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card" style="border-top-color: #e8a020;">
+                            <div class="product-card__badge badge-proceso">En proceso de registro</div>
+                            <h3 class="product-card__name">Premezclas Euro-Nutec · Broiler</h3>
+                            <p class="product-card__subtitle">Preiniciador–Iniciador · Crecimiento–Finalizador</p>
+                            <p class="product-card__text">Nuevas premezclas avícolas de Euro-Nutec (Grupo Nutec) en proceso de registro en Uruguay. Mayor precisión nutricional con mineralización orgánica avanzada.</p>
+                            <a href="contacto.html" class="product-card__cta">Consultar disponibilidad <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card" style="border-top-color: #e8a020;">
+                            <div class="product-card__badge badge-proceso">En proceso de registro</div>
+                            <h3 class="product-card__name">Premezclas Euro-Nutec · Postura</h3>
+                            <p class="product-card__subtitle">Crianza · Postura · Postura con pigmento</p>
+                            <p class="product-card__text">Premezclas para ponedoras con formulación Euro-Nutec. Disponibles próximamente en Uruguay, incluyendo versión con pigmento natural para yema.</p>
+                            <a href="contacto.html" class="product-card__cta">Consultar disponibilidad <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════
+             §2 · PORCICULTURA
+        ════════════════════════════════════ -->
+        <section class="product-section" id="porcinos">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="product-section__anchor-label">Porcicultura</span>
+                    <div class="section-title text-left">
+                        <span class="section-title__tagline">Ciclo productivo completo</span>
+                        <h2 class="section-title__title">Soluciones para porcinos</h2>
+                        <div class="section-title__icon"><img src="assets/images/icon/section-title-icon-1.png" alt=""></div>
+                    </div>
+                    <p>Desde el lechón destete hasta la cerda reproductora. Formulaciones específicas para cada etapa con minerales orgánicos de alta biodisponibilidad.</p>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card">
+                            <div class="product-card__badge">Línea Nutrisur</div>
+                            <h3 class="product-card__name">Nutripig</h3>
+                            <p class="product-card__subtitle">Premix vitamínico · Todas las etapas</p>
+                            <p class="product-card__text">Premix vitamínico-mineral para cerdos con 5 etapas productivas diferenciadas. Minerales orgánicos para máxima biodisponibilidad. Dosis: 2,5 kg/tonelada.</p>
+                            <div class="product-card__stages">
+                                <span class="stage-pill">Prestarter · hasta 15 kg</span>
+                                <span class="stage-pill">Starter · 15–30 kg</span>
+                                <span class="stage-pill">Crecimiento · 30–70 kg</span>
+                                <span class="stage-pill">Engorde · +70 kg</span>
+                                <span class="stage-pill">Reproducción</span>
+                            </div>
+                            <a href="contacto.html?ficha=nutripig" class="product-card__cta">Solicitar ficha técnica <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card" style="border-top-color: #e8a020;">
+                            <div class="product-card__badge badge-proceso">En proceso de registro</div>
+                            <h3 class="product-card__name">Nupig Sew</h3>
+                            <p class="product-card__subtitle">Balanceado · Lechones destete</p>
+                            <p class="product-card__text">Alimento completo para lechones en etapa de destete. Alta palatabilidad y digestibilidad para el período más crítico del ciclo porcino.</p>
+                            <a href="contacto.html" class="product-card__cta">Consultar disponibilidad <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card" style="border-top-color: #e8a020;">
+                            <div class="product-card__badge badge-proceso">En proceso de registro</div>
+                            <h3 class="product-card__name">Nupig Uno / Dos</h3>
+                            <p class="product-card__subtitle">Balanceados · Inicio y desarrollo</p>
+                            <p class="product-card__text">Alimentos completos para las etapas de inicio y desarrollo. Disponibles también en versión concentrado para quienes fabrican su propio balanceado.</p>
+                            <a href="contacto.html" class="product-card__cta">Consultar disponibilidad <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card" style="border-top-color: #e8a020;">
+                            <div class="product-card__badge badge-proceso">En proceso de registro</div>
+                            <h3 class="product-card__name">Premezcla Perfecto</h3>
+                            <p class="product-card__subtitle">Premezcla · 5 etapas</p>
+                            <p class="product-card__text">Premezcla vitamínico-mineral completa para las 5 etapas del ciclo porcino. Formulación Euro-Nutec de alta precisión.</p>
+                            <a href="contacto.html" class="product-card__cta">Consultar disponibilidad <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card" style="border-top-color: #e8a020;">
+                            <div class="product-card__badge badge-proceso">En proceso de registro</div>
+                            <h3 class="product-card__name">Nusem</h3>
+                            <p class="product-card__subtitle">Nutrición reproductora</p>
+                            <p class="product-card__text">Formulación específica para cerdas gestantes, lactantes y verracos. Optimiza el rendimiento reproductivo y la calidad del calostro.</p>
+                            <a href="contacto.html" class="product-card__cta">Consultar disponibilidad <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════
+             §3 · GANADERÍA LECHERA
+        ════════════════════════════════════ -->
+        <section class="product-section" id="bovinos">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="product-section__anchor-label">Ganadería Lechera</span>
+                    <div class="section-title text-left">
+                        <span class="section-title__tagline">Nuestras raíces desde 2006</span>
+                        <h2 class="section-title__title">Nutrición para vacas lecheras</h2>
+                        <div class="section-title__icon"><img src="assets/images/icon/section-title-icon-1.png" alt=""></div>
+                    </div>
+                    <p>La ganadería lechera es el origen de Nutrisur. Desde 2006 desarrollamos soluciones para la producción de leche en Uruguay, con productos que acompañan cada etapa del ciclo.</p>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card">
+                            <div class="product-card__badge">Línea Nutrisur</div>
+                            <h3 class="product-card__name">Nuterlac</h3>
+                            <p class="product-card__subtitle">Suplemento vitamínico-mineral · Vacas lecheras & carne</p>
+                            <p class="product-card__text">Producto estrella de Nutrisur. Suplemento completo para vacas en producción. Nutre y previene deficiencias en los períodos críticos del ciclo productivo.</p>
+                            <a href="contacto.html?ficha=nuterlac" class="product-card__cta">Solicitar información <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card">
+                            <div class="product-card__badge">Línea Nutrisur</div>
+                            <h3 class="product-card__name">Nucleo DP 18</h3>
+                            <p class="product-card__subtitle">Núcleo vitamínico-mineral · Vacas lecheras</p>
+                            <p class="product-card__text">Núcleo concentrado con alta densidad nutricional para formular dietas de vacas de alta producción. Permite mayor flexibilidad en la confección de raciones.</p>
+                            <a href="contacto.html?ficha=nucleodp18" class="product-card__cta">Solicitar información <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card">
+                            <div class="product-card__badge">Línea Nutrisur</div>
+                            <h3 class="product-card__name">Nutriparto Potenciado & Nutriparto Plus</h3>
+                            <p class="product-card__subtitle">Suplemento · Período de transición</p>
+                            <p class="product-card__text">Formulaciones específicas para el período periparto. Reducen el riesgo de fiebre de leche, cetosis y retención de placenta. Dos versiones para distintos sistemas de manejo.</p>
+                            <a href="contacto.html?ficha=nutriparto" class="product-card__cta">Solicitar información <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card">
+                            <div class="product-card__badge">Línea Nutrisur</div>
+                            <h3 class="product-card__name">Nutri Max & Nutridairy Max</h3>
+                            <p class="product-card__subtitle">Suplemento · Alta producción</p>
+                            <p class="product-card__text">Para vacas de alta producción y tambo tecnificado. Fórmulas de máxima densidad nutricional para sostener la curva de lactancia y mejorar la condición corporal al secado.</p>
+                            <a href="contacto.html" class="product-card__cta">Solicitar información <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card">
+                            <div class="product-card__badge">Línea Nutrisur</div>
+                            <h3 class="product-card__name">Nutribov Lecheras</h3>
+                            <p class="product-card__subtitle">Premix vitamínico-mineral · Bovinos</p>
+                            <p class="product-card__text">Premix completo para incorporar en raciones de vacas lecheras. Equilibrio mineral optimizado para producción sostenida y salud reproductiva.</p>
+                            <a href="contacto.html" class="product-card__cta">Solicitar información <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════
+             §4 · GANADERÍA DE CARNE
+        ════════════════════════════════════ -->
+        <section class="product-section" id="carne">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="product-section__anchor-label">Ganadería de Carne</span>
+                    <div class="section-title text-left">
+                        <span class="section-title__tagline">Producción intensiva y feedlot</span>
+                        <h2 class="section-title__title">Nutrición para bovinos de carne</h2>
+                        <div class="section-title__icon"><img src="assets/images/icon/section-title-icon-1.png" alt=""></div>
+                    </div>
+                    <p>Soluciones para sistemas de cría extensiva, recría y feedlot. Formulaciones que maximizan la ganancia diaria de peso y la eficiencia de conversión.</p>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card">
+                            <div class="product-card__badge">Línea Nutrisur</div>
+                            <h3 class="product-card__name">Nutripro</h3>
+                            <p class="product-card__subtitle">Suplemento · Bovinos de carne</p>
+                            <p class="product-card__text">Suplemento vitamínico-mineral para bovinos de carne en pastoreo o en sistemas semi-intensivos. Cubre deficiencias del forraje y mejora la condición corporal.</p>
+                            <a href="contacto.html?ficha=nutripro" class="product-card__cta">Solicitar información <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card">
+                            <div class="product-card__badge">Línea Nutrisur</div>
+                            <h3 class="product-card__name">Nutri Feedlot</h3>
+                            <p class="product-card__subtitle">Suplemento · Producción intensiva</p>
+                            <p class="product-card__text">Formulado específicamente para sistemas de feedlot y engorde intensivo. Maximiza la GDP y la eficiencia de conversión con mineralización de alta disponibilidad.</p>
+                            <a href="contacto.html?ficha=nutrifeedlot" class="product-card__cta">Solicitar información <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card">
+                            <div class="product-card__badge">Línea Nutrisur</div>
+                            <h3 class="product-card__name">Nuterlac (bovinos carne)</h3>
+                            <p class="product-card__subtitle">Suplemento · Vacas de cría</p>
+                            <p class="product-card__text">También utilizado en vacas de cría. Previene deficiencias en la época de mayor demanda nutricional (preparto y lactancia temprana).</p>
+                            <a href="contacto.html?ficha=nuterlac" class="product-card__cta">Solicitar información <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════
+             §5 · FEED SOLUTIONS
+        ════════════════════════════════════ -->
+        <section class="product-section" id="feed">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="product-section__anchor-label">Feed Solutions</span>
+                    <div class="section-title text-left">
+                        <span class="section-title__tagline">Optimización de proceso</span>
+                        <h2 class="section-title__title">Soluciones para plantas de alimentos</h2>
+                        <div class="section-title__icon"><img src="assets/images/icon/section-title-icon-1.png" alt=""></div>
+                    </div>
+                    <p>Productos para mejorar la eficiencia de elaboración en plantas de balanceados. Tecnología Grupo Nutec para procesos más limpios y eficientes.</p>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card">
+                            <div class="product-card__badge">Línea Nutrisur</div>
+                            <h3 class="product-card__name">Thermo Plus</h3>
+                            <p class="product-card__subtitle">Aditivo de proceso · Pelletizado</p>
+                            <p class="product-card__text">Mejora la calidad del pellet en el proceso de elaboración. Reduce la temperatura necesaria para la formación del pellet, protegiendo nutrientes termolábiles.</p>
+                            <a href="contacto.html?ficha=thermoplus" class="product-card__cta">Solicitar información <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="product-card">
+                            <div class="product-card__badge">Línea Nutrisur</div>
+                            <h3 class="product-card__name">Feedsteam</h3>
+                            <p class="product-card__subtitle">Aditivo de proceso · Higienización</p>
+                            <p class="product-card__text">Solución para la higienización y mejora de la calidad higiénico-sanitaria del alimento durante el proceso de elaboración en planta.</p>
+                            <a href="contacto.html?ficha=feedsteam" class="product-card__cta">Solicitar información <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════
+             §6 · MASCOTAS — NUPEC
+        ════════════════════════════════════ -->
+        <section class="product-section" id="mascotas">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="product-section__anchor-label">Mascotas</span>
+                    <div class="section-title text-left">
+                        <span class="section-title__tagline">Súper Premium · Grupo Nutec</span>
+                        <h2 class="section-title__title">NUPEC – Nutrición Científica Consciente</h2>
+                        <div class="section-title__icon"><img src="assets/images/icon/section-title-icon-1.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-7">
+                        <div class="nupec-band">
+                            <h3>NUPEC® Súper Premium</h3>
+                            <p>
+                                A través de Nutrisur, distribuimos en Uruguay la línea NUPEC de alimentos súper premium para perros y gatos. Más del 90% de digestibilidad, fabricados en México bajo ISO 22000 y validados por SANUREN — la red de investigación de Grupo Nutec.
+                            </p>
+                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0;">
+                                <div>
+                                    <p style="color:#4da6e8; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:10px;">Líneas Caninas</p>
+                                    <div class="nupec-line-item"><i class="fa fa-check"></i> Cachorro, Adulto, Senior (Razas Med., Pequeñas, Mini)</div>
+                                    <div class="nupec-line-item"><i class="fa fa-check"></i> 1st Care · High Performance</div>
+                                    <div class="nupec-line-item"><i class="fa fa-check"></i> Sensitive · Weight Control</div>
+                                    <div class="nupec-line-item"><i class="fa fa-check"></i> Urinary Management · Digestive Health · Renal Care</div>
+                                </div>
+                                <div style="padding-left:20px; border-left:1px solid rgba(255,255,255,0.15);">
+                                    <p style="color:#4da6e8; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:10px;">Líneas Felinas</p>
+                                    <div class="nupec-line-item"><i class="fa fa-check"></i> Kitten · Adult Indoor · Senior</div>
+                                    <div class="nupec-line-item"><i class="fa fa-check"></i> Hairball Control · Weight Care</div>
+                                    <div class="nupec-line-item"><i class="fa fa-check"></i> Urinary Management</div>
+                                    <div class="nupec-line-item"><i class="fa fa-check"></i> Digestive Health · Renal Care</div>
+                                </div>
+                            </div>
+                            <div style="margin-top:28px;">
+                                <a href="contacto.html?ficha=nupec" class="thm-btn" style="background:#fff !important; color:var(--ns-azul) !important;">Consultar sobre NUPEC <i class="icon-right-arrow"></i></a>
+                                <a href="https://www.nupec.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7); font-size:13px; margin-left:20px; text-decoration:none;">Ver sitio NUPEC →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5">
+                        <div style="padding:30px 0 0 20px;">
+                            <p style="font-size:13px; color:var(--ns-gris-medio); font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-bottom:20px;">¿Por qué +90% de digestibilidad?</p>
+                            <div style="display:flex; flex-direction:column; gap:16px;">
+                                <div style="display:flex; gap:14px; align-items:flex-start;">
+                                    <div style="width:36px; height:36px; background:var(--ns-azul); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                        <i class="fas fa-microscope" style="color:#fff; font-size:14px;"></i>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:var(--ns-azul); font-size:14px; font-weight:700; margin-bottom:4px;">Validado por SANUREN</h5>
+                                        <p style="font-size:13px; color:var(--ns-gris-medio); margin:0; line-height:1.6;">Red especializada de investigación en nutrición animal de Grupo Nutec.</p>
+                                    </div>
+                                </div>
+                                <div style="display:flex; gap:14px; align-items:flex-start;">
+                                    <div style="width:36px; height:36px; background:var(--ns-azul); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                        <i class="fas fa-industry" style="color:#fff; font-size:14px;"></i>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:var(--ns-azul); font-size:14px; font-weight:700; margin-bottom:4px;">Sin contaminación cruzada</h5>
+                                        <p style="font-size:13px; color:var(--ns-gris-medio); margin:0; line-height:1.6;">Planta exclusiva para petfood con líneas de producción independientes.</p>
+                                    </div>
+                                </div>
+                                <div style="display:flex; gap:14px; align-items:flex-start;">
+                                    <div style="width:36px; height:36px; background:var(--ns-azul); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                        <i class="fas fa-certificate" style="color:#fff; font-size:14px;"></i>
+                                    </div>
+                                    <div>
+                                        <h5 style="color:var(--ns-azul); font-size:14px; font-weight:700; margin-bottom:4px;">ISO 22000 · FSSC · HACCP</h5>
+                                        <p style="font-size:13px; color:var(--ns-gris-medio); margin:0; line-height:1.6;">Certificaciones internacionales que garantizan inocuidad en cada lote.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUTEC STRIP -->
+        <div class="nutec-strip">
+            <div class="container">
+                <p style="margin:0;">Nutrisur opera como parte de <strong>Grupo Nutec</strong> — empresa líder en nutrición animal desde 1995. <a href="https://www.gponutec.com" target="_blank" rel="noopener">Conocer Grupo Nutec →</a></p>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="site-footer__top">
+                <div class="site-footer__top-inner">
+                    <div class="site-footer-shape-1 float-bob-x" style="background-image: url(assets/images/shapes/site-footer-shape-1.png);"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                                <div class="footer-widget__column footer-widget__about">
+                                    <div class="footer-widget__logo">
+                                        <a href="index.html"><span style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:22px;color:#fff;">nutri<span style="color:#4da6e8;">sur</span></span></a>
+                                    </div>
+                                    <p class="footer-widget__about-text">Empresa 100% uruguaya especializada en nutrición animal. Fundada en 2006 en Juanicó, Uruguay. Ahora con el respaldo de Grupo Nutec.</p>
+                                    <div class="site-footer__social" style="margin-top:16px;">
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/company/gruponutec" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                                <div class="footer-widget__column footer-widget__links">
+                                    <div class="footer-widget__title-box"><h3 class="footer-widget__title">Navegación</h3></div>
+                                    <ul class="footer-widget__links-list list-unstyled">
+                                        <li><a href="index.html">Inicio</a></li>
+                                        <li><a href="nosotros.html">Nosotros</a></li>
+                                        <li><a href="productos.html">Productos</a></li>
+                                        <li><a href="contacto.html">Contacto</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                                <div class="footer-widget__column footer-widget__links">
+                                    <div class="footer-widget__title-box"><h3 class="footer-widget__title">Productos</h3></div>
+                                    <ul class="footer-widget__links-list list-unstyled">
+                                        <li><a href="#aves">Avicultura</a></li>
+                                        <li><a href="#porcinos">Porcicultura</a></li>
+                                        <li><a href="#bovinos">Ganadería Lechera</a></li>
+                                        <li><a href="#carne">Ganadería de Carne</a></li>
+                                        <li><a href="#mascotas">Mascotas – NUPEC</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                                <div class="footer-widget__column footer-widget__Contact">
+                                    <div class="footer-widget__title-box"><h3 class="footer-widget__title">Contacto</h3></div>
+                                    <ul class="footer-widget__Contact-list list-unstyled">
+                                        <li><div class="icon"><span class="fas fa-phone-square-alt"></span></div><div class="text"><p><a href="tel:+59843358522">(+598) 4335 8522</a></p></div></li>
+                                        <li><div class="icon"><span class="fas fa-envelope"></span></div><div class="text"><p><a href="mailto:info@nutrisur.com.uy">info@nutrisur.com.uy</a></p></div></li>
+                                        <li><div class="icon"><span class="icon-pin"></span></div><div class="text"><p>Ruta 5 Km 37, Juanicó, Canelones, Uruguay</p></div></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="site-footer__bottom-inner">
+                                <p class="site-footer__bottom-text">© <span id="footer-year"></span> Nutrisur · Todos los derechos reservados · Parte del <a href="https://www.gponutec.com" target="_blank">Grupo Nutec</a></p>
+                                <div class="site-footer__bottom-scroll">
+                                    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-up-arrow"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Mobile nav -->
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+            <div class="logo-box">
+                <a href="index.html"><span style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:22px;color:#fff;">nutri<span style="color:#4da6e8;">sur</span></span></a>
+            </div>
+            <div class="mobile-nav__container"></div>
+            <ul class="mobile-nav__contact list-unstyled">
+                <li><i class="fa fa-envelope"></i><a href="mailto:info@nutrisur.com.uy">info@nutrisur.com.uy</a></li>
+                <li><i class="fa fa-phone-alt"></i><a href="tel:+59843358522">(+598) 4335 8522</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/odometer/odometer.min.js"></script>
+    <script src="assets/vendors/swiper/swiper.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/agrion.js"></script>
+    <script>
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+        // Highlight active nav item on scroll
+        const sections = document.querySelectorAll('.product-section');
+        const navLinks = document.querySelectorAll('.products-nav__list a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => { if (window.scrollY >= s.offsetTop - 180) current = s.getAttribute('id'); });
+            navLinks.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
