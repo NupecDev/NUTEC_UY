@@ -9809,7 +9809,9 @@ ul {
 }
 
 .contact-form__input-box input[type="text"],
-.contact-form__input-box input[type="email"] {
+.contact-form__input-box input[type="email"],
+.contact-form__input-box input[type="tel"], select
+{
   height: 64px;
   width: 100%;
   border: none;

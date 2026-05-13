@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto – Nutrisur | Nutrición Animal Uruguay</title>
+    <meta name="description" content="Contacte al equipo técnico de Nutrisur. Ruta 5 Km 37, Juanicó, Uruguay. Tel: (+598) 4335 8522 · info@nutrisur.com.uy" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="assets/vendors/agrion-icons/style.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/agrion.css" />
+    <link rel="stylesheet" href="assets/css/agrion-responsive.css" />
+
+    <!-- ══ NUTRISUR BRAND OVERRIDE ══════════════════════════════
+         Paleta de nutrisur.com.uy
+         --azul        : #013558
+         --azul-claro  : #0369B2
+         --light-gray  : #828282
+         --medium-gray : #4C4C4C
+    ═══════════════════════════════════════════════════════════ -->
+    <style>
+        :root {
+            --ns-azul:        #013558;
+            --ns-azul-claro:  #0369B2;
+            --ns-azul-hover:  #024a7a;
+            --ns-gris:        #828282;
+            --ns-gris-medio:  #4C4C4C;
+            --ns-blanco:      #ffffff;
+            --ns-bg-claro:    #f4f8fb;
+            --ns-border:      #d0dce8;
+        }
+
+        /* ── Botones ── */
+        .thm-btn {
+            background-color: var(--ns-azul) !important;
+            color: var(--ns-blanco) !important;
+            border-radius: 4px !important;
+        }
+        .thm-btn:hover { background-color: var(--ns-azul-claro) !important; }
+
+        /* ── Header top ── */
+        .main-header__menu-box-top { background-color: var(--ns-azul) !important; }
+        .main-header__contact-list li p,
+        .main-header__contact-list li p a { color: rgba(255,255,255,.85) !important; }
+        .main-header__social a { color: rgba(255,255,255,.7) !important; }
+        .main-header__social a:hover { color: #fff !important; }
+
+        /* ── Header nav ── */
+        .main-header__menu-box-bottom,
+        .stricky-header {
+            background-color: #fff !important;
+            border-bottom: 2px solid var(--ns-azul) !important;
+        }
+        .main-menu__list > li > a { color: var(--ns-azul) !important; font-weight: 600 !important; }
+        .main-menu__list > li > a:hover,
+        .main-menu__list > li.current > a { color: var(--ns-azul-claro) !important; }
+        .main-menu__btn { background-color: var(--ns-azul-claro) !important; }
+        .main-header__phone-number a { color: var(--ns-azul) !important; }
+        .main-header__call-inner { background-color: var(--ns-azul) !important; }
+
+        /* ── Section titles ── */
+        .section-title__tagline { color: var(--ns-azul-claro) !important; }
+        .section-title__title   { color: var(--ns-azul) !important; }
+
+        /* ── Preloader / scroll / mobile nav ── */
+        .preloader              { background-color: var(--ns-azul) !important; }
+        .mobile-nav__content    { background-color: var(--ns-azul) !important; }
+        .mobile-nav__close      { color: #fff !important; }
+        .scroll-to-top          { background-color: var(--ns-azul-claro) !important; }
+
+        /* ── Page header ── */
+        .page-header-bg         { background-color: var(--ns-azul); }
+        .page-header__inner h2  { color: #fff; }
+        .thm-breadcrumb li a,
+        .thm-breadcrumb li span,
+        .thm-breadcrumb li      { color: rgba(255,255,255,.75) !important; }
+
+        /* ── Google map section ── */
+        .google-map             { background: var(--ns-bg-claro); padding: 60px 0 0; }
+        .google-map-box         { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 24px rgba(1,53,88,.1); }
+        .google-map__one        {
+            width: 100%;
+            height: 420px;
+            border: none;
+            display: block;
+            filter: grayscale(15%);
+        }
+
+        /* ── Contact details cards (below map) ── */
+        .contact-details {
+            margin-top: -40px;
+            position: relative;
+            z-index: 10;
+            padding-bottom: 0;
+        }
+        .contact-details__single {
+            background: #fff;
+            border: 1px solid var(--ns-border);
+            border-top: 3px solid var(--ns-azul);
+            border-radius: 6px;
+            padding: 28px 24px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            box-shadow: 0 4px 16px rgba(1,53,88,.07);
+            height: 100%;
+            margin-bottom: 24px;
+            transition: box-shadow .2s, transform .2s;
+        }
+        .contact-details__single:hover {
+            box-shadow: 0 8px 28px rgba(1,53,88,.13);
+            transform: translateY(-3px);
+        }
+        .contact-details__single-last { border-top-color: var(--ns-azul-claro); }
+
+        .contact-details__icon {
+            width: 50px;
+            height: 50px;
+            background: var(--ns-azul);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-details__icon span {
+            color: #fff !important;
+            font-size: 20px;
+        }
+        .contact-details__text p {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--ns-gris);
+            margin: 0 0 4px;
+        }
+        .contact-details__text h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--ns-azul);
+            margin: 0;
+            line-height: 1.45;
+        }
+        .contact-details__text h3 a {
+            color: var(--ns-azul);
+            text-decoration: none;
+            transition: color .2s;
+        }
+        .contact-details__text h3 a:hover { color: var(--ns-azul-claro); }
+
+        /* Social icons card */
+        .contact-details__social {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding-top: 4px;
+        }
+        .contact-details__social a {
+            width: 38px;
+            height: 38px;
+            background: var(--ns-bg-claro);
+            border: 1px solid var(--ns-border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ns-azul);
+            font-size: 15px;
+            text-decoration: none;
+            transition: background .2s, color .2s;
+        }
+        .contact-details__social a:hover {
+            background: var(--ns-azul-claro);
+            color: #fff;
+            border-color: var(--ns-azul-claro);
+        }
+
+        /* ── Contact form section ── */
+        .contact-two {
+            padding: 80px 0 100px;
+            background: #fff;
+            position: relative;
+        }
+        .contact-two__shape-1 {
+            position: absolute;
+            right: -50px;
+            top: 40px;
+            opacity: .5;
+            pointer-events: none;
+        }
+
+        /* Form fields */
+        .contact-form__input-box { margin-bottom: 20px; }
+        .contact-form__input-box input,
+        .contact-form__input-box textarea,
+        .contact-form__input-box select {
+            width: 100%;
+            height: 54px;
+            padding: 0 20px;
+            border: 1px solid var(--ns-border);
+            border-radius: 4px;
+            background: var(--ns-bg-claro);
+            color: var(--ns-gris-medio);
+            font-size: 14px;
+            font-family: 'DM Sans', sans-serif;
+            transition: border-color .2s, box-shadow .2s;
+            outline: none;
+        }
+        .contact-form__input-box input:focus,
+        .contact-form__input-box textarea:focus,
+        .contact-form__input-box select:focus {
+            border-color: var(--ns-azul-claro);
+            box-shadow: 0 0 0 3px rgba(3,105,178,.1);
+            background: #fff;
+        }
+        .contact-form__input-box input::placeholder,
+        .contact-form__input-box textarea::placeholder { color: var(--ns-gris); }
+        .contact-form__input-box.text-message-box textarea {
+            height: 140px;
+            padding-top: 14px;
+            resize: vertical;
+        }
+        .contact-form__input-box select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23828282' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            cursor: pointer;
+        }
+        .contact-form__input-box select option { background: #fff; color: var(--ns-gris-medio); }
+
+        /* RGPD block */
+        .ns-rgpd {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            background: var(--ns-bg-claro);
+            border: 1px solid var(--ns-border);
+            border-left: 3px solid var(--ns-azul);
+            border-radius: 4px;
+            padding: 14px 16px;
+            margin-bottom: 14px;
+        }
+        .ns-rgpd input[type="checkbox"] {
+            margin-top: 3px;
+            flex-shrink: 0;
+            accent-color: var(--ns-azul-claro);
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+        .ns-rgpd label {
+            font-size: 12px;
+            line-height: 1.65;
+            color: var(--ns-gris);
+            cursor: pointer;
+            margin: 0;
+        }
+        .ns-rgpd label a { color: var(--ns-azul-claro); }
+
+        /* Submit button */
+        .contact-form__btn-box { margin-top: 8px; }
+        .contact-two__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 36px !important;
+            font-size: 14px !important;
+            font-weight: 600 !important;
+        }
+
+        /* ── Info lateral ── */
+        .ns-contact-aside { padding-left: 20px; }
+        .ns-aside-block {
+            background: var(--ns-bg-claro);
+            border: 1px solid var(--ns-border);
+            border-radius: 6px;
+            padding: 28px 24px;
+            margin-bottom: 20px;
+        }
+        .ns-aside-block h5 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--ns-azul);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .ns-aside-block h5 i {
+            width: 30px;
+            height: 30px;
+            background: var(--ns-azul);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 13px;
+            flex-shrink: 0;
+        }
+        .ns-aside-list { list-style: none; padding: 0; margin: 0; }
+        .ns-aside-list li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--ns-border);
+            font-size: 14px;
+            color: var(--ns-gris-medio);
+        }
+        .ns-aside-list li:last-child { border-bottom: none; padding-bottom: 0; }
+        .ns-aside-list li i { color: var(--ns-azul-claro); margin-top: 2px; flex-shrink: 0; }
+        .ns-aside-list li a { color: var(--ns-azul); text-decoration: none; font-weight: 500; }
+        .ns-aside-list li a:hover { color: var(--ns-azul-claro); }
+
+        /* Horario badge */
+        .ns-horario {
+            display: inline-block;
+            background: var(--ns-azul);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: .5px;
+            padding: 3px 10px;
+            border-radius: 3px;
+            margin-bottom: 12px;
+        }
+
+        /* ── Footer ── */
+        .site-footer__top { background-color: var(--ns-azul) !important; }
+        .site-footer__bottom { background-color: #011e33 !important; }
+        .footer-widget__title { color: #fff !important; }
+        .footer-widget__about-text,
+        .footer-widget__links-list li a,
+        .footer-widget__Contact-list li p a { color: rgba(255,255,255,.75) !important; }
+        .footer-widget__links-list li a:hover { color: var(--ns-azul-claro) !important; }
+        .footer-widget__Contact-btn { background-color: var(--ns-azul-claro) !important; }
+        .site-footer__bottom-text,
+        .site-footer__bottom-text a { color: rgba(255,255,255,.65) !important; }
+        .site-footer__social a:hover { background-color: var(--ns-azul-claro) !important; }
+
+        /* ── Nutrisur logo text ── */
+        .ns-logo-text { font-family:'DM Sans',sans-serif; font-weight:700; font-size:26px; color:var(--ns-azul); }
+        .ns-logo-text span { color:var(--ns-azul-claro); }
+
+        /* ── Nutec strip ── */
+        .nutec-strip { background:#f0f6fb; border-top:1px solid #cde0f0; padding:10px 0; text-align:center; font-size:12px; color:var(--ns-gris); }
+        .nutec-strip strong { color:var(--ns-azul); }
+        .nutec-strip a { color:var(--ns-azul-claro); text-decoration:none; }
+
+        /* ── Success / error messages ── */
+        .form-result {
+            display: none;
+            padding: 14px 18px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-top: 16px;
+            font-weight: 500;
+        }
+        .form-result.success { background: #e6f4ea; border: 1px solid #b7dfc0; color: #1a7a34; }
+        .form-result.error   { background: #fdecea; border: 1px solid #f5c2c0; color: #b91c1c; }
+    </style>
+</head>
+
+<body class="custom-cursor">
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+    <div class="preloader"><div class="preloader__image"></div></div>
+
+    <div class="page-wrapper">
+
+        <!-- ════════════════════════════════════
+             HEADER
+        ════════════════════════════════════ -->
+        <header class="main-header">
+            <div class="main-header__wrapper">
+                <div class="main-header__wrapper-inner">
+
+                    <div class="main-header__logo">
+                        <a href="index.html">
+                            <span class="ns-logo-text">nutri<span>sur</span></span>
+                        </a>
+                    </div>
+
+                    <div class="main-header__menu-box">
+                        <div class="main-header__menu-box-top">
+                            <ul class="list-unstyled main-header__contact-list">
+                                <li>
+                                    <div class="icon"><i class="icon-email"></i></div>
+                                    <div class="text"><p><a href="mailto:info@nutrisur.com.uy">info@nutrisur.com.uy</a></p></div>
+                                </li>
+                                <li>
+                                    <div class="icon"><i class="icon-pin"></i></div>
+                                    <div class="text"><p>Ruta 5 Km 37, Juanicó, Uruguay</p></div>
+                                </li>
+                            </ul>
+                            <div class="main-header__social">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/company/gruponutec" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="main-header__menu-box-bottom">
+                            <nav class="main-menu">
+                                <div class="main-menu__wrapper">
+                                    <div class="main-menu__wrapper-inner">
+                                        <div class="main-menu__left">
+                                            <div class="main-menu__main-menu-box">
+                                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                                <ul class="main-menu__list">
+                                                    <li><a href="index.html">Inicio</a></li>
+                                                    <li><a href="nosotros.html">Nosotros</a></li>
+                                                    <li class="dropdown">
+                                                        <a href="productos.html">Productos</a>
+                                                        <ul class="shadow-box">
+                                                            <li><a href="productos.html#aves">Avicultura</a></li>
+                                                            <li><a href="productos.html#porcinos">Porcicultura</a></li>
+                                                            <li><a href="productos.html#bovinos">Ganadería Lechera</a></li>
+                                                            <li><a href="productos.html#carne">Ganadería de Carne</a></li>
+                                                            <li><a href="productos.html#mascotas">Mascotas – NUPEC</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="current"><a href="contacto.html">Contacto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="main-menu__right">
+                                            <div class="main-menu__search-cart-btn-box">
+                                                <div class="main-menu__btn-box">
+                                                    <a href="contacto.html" class="thm-btn main-menu__btn">Consultar <i class="icon-right-arrow"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="main-header__phone-contact-box">
+                        <div class="main-header__phone-number">
+                            <a href="tel:+59843358522">(+598) 4335 8522</a>
+                        </div>
+                        <div class="main-header__call-box">
+                            <div class="main-header__call-inner">
+                                <div class="main-header__call-icon"><span class="fas fa-phone"></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div>
+        </div>
+
+        <!-- ════════════════════════════════════
+             PAGE HEADER
+        ════════════════════════════════════ -->
+        <section class="page-header">
+            <div class="page-header-bg"
+                style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
+            </div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><span>/</span></li>
+                        <li>Contacto</li>
+                    </ul>
+                    <h2>Contáctenos</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════
+             MAPA + TARJETAS DE CONTACTO
+        ════════════════════════════════════ -->
+        <section class="google-map">
+            <div class="container">
+
+                <!-- Mapa — Ruta 5 Km 37, Juanicó, Canelones -->
+                <div class="google-map-box">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.5!2d-56.3000!3d-34.7200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDQzJzEyLjAiUyA1NsKwMTgnMDAuMCJX!5e0!3m2!1ses!2suy!4v1"
+                        class="google-map__one"
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación Nutrisur – Ruta 5 Km 37, Juanicó">
+                    </iframe>
+                </div>
+
+                <!-- Tarjetas de contacto flotantes -->
+                <div class="contact-details">
+                    <div class="row">
+
+                        <!-- Teléfonos -->
+                        <div class="col-xl-3 col-lg-6 col-md-6">
+                            <div class="contact-details__single">
+                                <div class="contact-details__icon">
+                                    <span class="icon-help"></span>
+                                </div>
+                                <div class="contact-details__text">
+                                    <p>Llámenos</p>
+                                    <h3>
+                                        <a href="tel:+59843358522">(+598) 4335 8522</a><br>
+                                        <a href="tel:+59891305600" style="font-size:13px; font-weight:400;">WhatsApp: 91 305 600</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-xl-3 col-lg-6 col-md-6">
+                            <div class="contact-details__single">
+                                <div class="contact-details__icon">
+                                    <span class="icon-mailbox"></span>
+                                </div>
+                                <div class="contact-details__text">
+                                    <p>Escríbanos</p>
+                                    <h3>
+                                        <a href="mailto:info@nutrisur.com.uy">info@nutrisur.com.uy</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dirección -->
+                        <div class="col-xl-3 col-lg-6 col-md-6">
+                            <div class="contact-details__single contact-details__single-last">
+                                <div class="contact-details__icon">
+                                    <span class="icon-maps-and-flags"></span>
+                                </div>
+                                <div class="contact-details__text">
+                                    <p>Visítenos</p>
+                                    <h3>Ruta 5 Km 37, Juanicó<br>Canelones, Uruguay</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Redes sociales -->
+                        <div class="col-xl-3 col-lg-6 col-md-6">
+                            <div class="contact-details__single" style="flex-direction:column; justify-content:center;">
+                                <p style="font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:1.5px; color:var(--ns-gris); margin-bottom:12px;">Síguenos</p>
+                                <div class="contact-details__social">
+                                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/company/gruponutec" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://wa.me/59891305600" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /.contact-details -->
+
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════
+             FORMULARIO + INFO LATERAL
+        ════════════════════════════════════ -->
+        <section class="contact-two">
+            <div class="contact-two__shape-1 float-bob-x">
+                <img src="assets/images/shapes/contact-two-shape-1.png" alt="">
+            </div>
+            <div class="container">
+
+                <div class="section-title text-center" style="margin-bottom:52px;">
+                    <span class="section-title__tagline">Estamos aquí para ayudarle</span>
+                    <h2 class="section-title__title">Envíenos su consulta</h2>
+                    <div class="section-title__icon">
+                        <img src="assets/images/icon/section-title-icon-1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <!-- ── FORMULARIO ── -->
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="contact-two__form-box">
+                            <form
+                                action="assets/inc/sendemail.php"
+                                class="contact-two__form contact-form-validated"
+                                id="ns-contact-form"
+                                novalidate="novalidate">
+
+                                <div class="row">
+                                    <!-- Nombre -->
+                                    <div class="col-xl-6">
+                                        <div class="contact-form__input-box">
+                                            <input type="text" name="name" placeholder="Nombre y apellido *" required>
+                                        </div>
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="col-xl-6">
+                                        <div class="contact-form__input-box">
+                                            <input type="email" name="email" placeholder="Correo electrónico *" required>
+                                        </div>
+                                    </div>
+                                    <!-- Teléfono -->
+                                    <div class="col-xl-6">
+                                        <div class="contact-form__input-box">
+                                            <input type="tel" name="phone" placeholder="Teléfono / WhatsApp">
+                                        </div>
+                                    </div>
+                                    <!-- Empresa / establecimiento -->
+                                    <div class="col-xl-6">
+                                        <div class="contact-form__input-box">
+                                            <input type="text" name="company" placeholder="Empresa o establecimiento">
+                                        </div>
+                                    </div>
+                                    <!-- Departamento -->
+                                    <div class="col-xl-6">
+                                        <div class="contact-form__input-box">
+                                            <input type="text" name="region" placeholder="Departamento / Localidad *" required>
+                                        </div>
+                                    </div>
+                                    <!-- Motivo -->
+                                    <div class="col-xl-6">
+                                        <div class="contact-form__input-box">
+                                            <select name="motivo" id="motivo" required>
+                                                <option value="" disabled selected>Motivo del contacto *</option>
+                                                <optgroup label="Fichas Técnicas">
+                                                    <option value="fiche-nutribroiler">Ficha técnica – Nutribroiler</option>
+                                                    <option value="fiche-nutrilayer">Ficha técnica – Nutrilayer</option>
+                                                    <option value="fiche-nutripig">Ficha técnica – Nutripig</option>
+                                                </optgroup>
+                                                <optgroup label="Consultas por Rubro">
+                                                    <option value="avicultura">Avicultura</option>
+                                                    <option value="porcinos">Porcicultura</option>
+                                                    <option value="lechero">Ganadería Lechera</option>
+                                                    <option value="carne">Ganadería de Carne</option>
+                                                    <option value="feed-solutions">Feed Solutions</option>
+                                                    <option value="nupec">Mascotas – NUPEC</option>
+                                                </optgroup>
+                                                <optgroup label="Otros">
+                                                    <option value="comercial">Información comercial / Precios</option>
+                                                    <option value="soporte">Soporte técnico-nutricional</option>
+                                                    <option value="candidatura">Candidatura a un puesto</option>
+                                                    <option value="otro">Otro</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- Mensaje -->
+                                    <div class="col-xl-12">
+                                        <div class="contact-form__input-box text-message-box">
+                                            <textarea name="message" placeholder="Su consulta o mensaje *" required></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- RGPD consent obligatorio -->
+                                <div class="ns-rgpd">
+                                    <input type="checkbox" id="rgpd_consent" name="rgpd_consent" required>
+                                    <label for="rgpd_consent">
+                                        <strong>✱ Requerido:</strong> Acepto que mis datos sean tratados por <strong>Nutrisur</strong> para responder a mi consulta. Puedo ejercer mis derechos de acceso, rectificación y supresión escribiendo a <a href="mailto:info@nutrisur.com.uy">info@nutrisur.com.uy</a>.
+                                    </label>
+                                </div>
+
+                                <!-- Marketing consent opcional -->
+                                <div class="ns-rgpd" style="border-left-color: var(--ns-border);">
+                                    <input type="checkbox" id="marketing_consent" name="marketing_consent">
+                                    <label for="marketing_consent">
+                                        Acepto recibir comunicaciones técnicas y comerciales de Nutrisur (opcional). Me puedo dar de baja en cualquier momento.
+                                    </label>
+                                </div>
+
+                                <div class="contact-form__btn-box">
+                                    <button type="submit" class="thm-btn contact-two__btn">
+                                        Enviar consulta <i class="icon-right-arrow"></i>
+                                    </button>
+                                </div>
+
+                                <!-- Mensajes de resultado -->
+                                <div class="form-result success" id="form-success">
+                                    ✓ Mensaje enviado correctamente. Nuestro equipo le responderá a la brevedad.
+                                </div>
+                                <div class="form-result error" id="form-error">
+                                    ✗ Hubo un error al enviar el mensaje. Por favor intente nuevamente o escríbanos a info@nutrisur.com.uy.
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- ── INFO LATERAL ── -->
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="ns-contact-aside">
+
+                            <!-- Horarios -->
+                            <div class="ns-aside-block">
+                                <h5><i class="fas fa-clock"></i> Horarios de atención</h5>
+                                <span class="ns-horario">Lunes a Viernes</span>
+                                <ul class="ns-aside-list">
+                                    <li>
+                                        <i class="fas fa-sun"></i>
+                                        <span>08:00 – 17:00 hs (oficina)</span>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-whatsapp"></i>
+                                        <span>WhatsApp: <a href="https://wa.me/59891305600">91 305 600</a> (horario extendido)</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope"></i>
+                                        <span>Email respondido en 24 hs hábiles</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Datos de contacto directos -->
+                            <div class="ns-aside-block">
+                                <h5><i class="fas fa-map-marker-alt"></i> Ubicación</h5>
+                                <ul class="ns-aside-list">
+                                    <li>
+                                        <i class="fas fa-road"></i>
+                                        <span>Ruta 5 Km 37, Juanicó<br>Canelones, Uruguay</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone"></i>
+                                        <a href="tel:+59843358522">(+598) 4335 8522</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="mailto:info@nutrisur.com.uy">info@nutrisur.com.uy</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-globe"></i>
+                                        <a href="https://www.nutrisur.com.uy" target="_blank" rel="noopener">www.nutrisur.com.uy</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- CTA ficha técnica rápida -->
+                            <div class="ns-aside-block" style="background:var(--ns-azul); border-color:var(--ns-azul);">
+                                <h5 style="color:#fff;"><i style="background:rgba(255,255,255,.15);" class="fas fa-file-alt"></i> ¿Busca una ficha técnica?</h5>
+                                <p style="font-size:13px; color:rgba(255,255,255,.8); margin-bottom:16px; line-height:1.6;">
+                                    Seleccione el producto en el formulario o contáctenos directamente por WhatsApp para recibir la ficha en PDF.
+                                </p>
+                                <a href="https://wa.me/59891305600?text=Hola,%20solicito%20la%20ficha%20técnica%20de%20"
+                                   target="_blank" rel="noopener"
+                                   class="thm-btn"
+                                   style="background:#fff !important; color:var(--ns-azul) !important; font-size:13px; padding:10px 20px;">
+                                    <i class="fab fa-whatsapp" style="margin-right:6px;"></i> Pedir por WhatsApp
+                                </a>
+                            </div>
+
+                            <!-- Grupo Nutec -->
+                            <div class="ns-aside-block" style="border-top-color:var(--ns-azul-claro);">
+                                <h5><i class="fas fa-globe-americas"></i> Respaldo internacional</h5>
+                                <p style="font-size:13px; color:var(--ns-gris-medio); margin:0 0 12px; line-height:1.6;">
+                                    Nutrisur opera como parte de <strong style="color:var(--ns-azul);">Grupo Nutec</strong>, empresa líder en nutrición animal presente en más de 15 países desde 1995.
+                                </p>
+                                <a href="https://www.gponutec.com" target="_blank" rel="noopener"
+                                   style="font-size:13px; color:var(--ns-azul-claro); text-decoration:none; font-weight:600;">
+                                    Conocer Grupo Nutec →
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- /.col -->
+
+                </div>
+                <!-- /.row -->
+
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════
+             NUTEC STRIP
+        ════════════════════════════════════ -->
+        <div class="nutec-strip">
+            <div class="container">
+                <p style="margin:0;">
+                    Nutrisur opera como parte de <strong>Grupo Nutec</strong> — empresa líder en nutrición animal desde 1995, presente en más de 15 países.
+                    <a href="https://www.gponutec.com" target="_blank" rel="noopener">Conocer Grupo Nutec →</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- ════════════════════════════════════
+             FOOTER
+        ════════════════════════════════════ -->
+        <footer class="site-footer">
+            <div class="site-footer__top">
+                <div class="site-footer__top-inner">
+                    <div class="site-footer-shape-1 float-bob-x"
+                        style="background-image: url(assets/images/shapes/site-footer-shape-1.png);"></div>
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                                <div class="footer-widget__column footer-widget__about">
+                                    <div class="footer-widget__logo">
+                                        <a href="index.html">
+                                            <span style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:22px;color:#fff;">nutri<span style="color:#4da6e8;">sur</span></span>
+                                        </a>
+                                    </div>
+                                    <p class="footer-widget__about-text">
+                                        Empresa 100% uruguaya especializada en nutrición animal. Fundada en 2006 en Juanicó, Uruguay. Ahora con el respaldo de Grupo Nutec.
+                                    </p>
+                                    <div class="site-footer__social" style="margin-top:16px;">
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/company/gruponutec" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                                <div class="footer-widget__column footer-widget__links">
+                                    <div class="footer-widget__title-box">
+                                        <h3 class="footer-widget__title">Navegación</h3>
+                                    </div>
+                                    <ul class="footer-widget__links-list list-unstyled">
+                                        <li><a href="index.html">Inicio</a></li>
+                                        <li><a href="nosotros.html">Nosotros</a></li>
+                                        <li><a href="productos.html">Productos</a></li>
+                                        <li><a href="contacto.html">Contacto</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                                <div class="footer-widget__column footer-widget__links">
+                                    <div class="footer-widget__title-box">
+                                        <h3 class="footer-widget__title">Productos</h3>
+                                    </div>
+                                    <ul class="footer-widget__links-list list-unstyled">
+                                        <li><a href="productos.html#aves">Avicultura</a></li>
+                                        <li><a href="productos.html#porcinos">Porcicultura</a></li>
+                                        <li><a href="productos.html#bovinos">Ganadería Lechera</a></li>
+                                        <li><a href="productos.html#carne">Ganadería de Carne</a></li>
+                                        <li><a href="productos.html#mascotas">Mascotas – NUPEC</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                                <div class="footer-widget__column footer-widget__Contact">
+                                    <div class="footer-widget__title-box">
+                                        <h3 class="footer-widget__title">Contacto</h3>
+                                    </div>
+                                    <ul class="footer-widget__Contact-list list-unstyled">
+                                        <li>
+                                            <div class="icon"><span class="fas fa-phone-square-alt"></span></div>
+                                            <div class="text"><p><a href="tel:+59843358522">(+598) 4335 8522</a></p></div>
+                                        </li>
+                                        <li>
+                                            <div class="icon"><span class="fas fa-envelope"></span></div>
+                                            <div class="text"><p><a href="mailto:info@nutrisur.com.uy">info@nutrisur.com.uy</a></p></div>
+                                        </li>
+                                        <li>
+                                            <div class="icon"><span class="icon-pin"></span></div>
+                                            <div class="text"><p>Ruta 5 Km 37, Juanicó, Canelones, Uruguay</p></div>
+                                        </li>
+                                    </ul>
+                                    <form class="footer-widget__Contact-form">
+                                        <div class="footer-widget__Contact-input-box">
+                                            <input type="email" placeholder="Correo electrónico" name="email">
+                                            <button type="submit" class="footer-widget__Contact-btn">
+                                                <i class="icon-right-arrow"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-footer__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="site-footer__bottom-inner">
+                                <p class="site-footer__bottom-text">
+                                    © <span id="footer-year"></span> Nutrisur · Todos los derechos reservados ·
+                                    Parte del <a href="https://www.gponutec.com" target="_blank" rel="noopener">Grupo Nutec</a>
+                                </p>
+                                <div class="site-footer__bottom-scroll">
+                                    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+                                        <i class="icon-up-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div><!-- /.page-wrapper -->
+
+    <!-- Mobile nav -->
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+            <div class="logo-box">
+                <a href="index.html">
+                    <span style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:22px;color:#fff;">nutri<span style="color:#4da6e8;">sur</span></span>
+                </a>
+            </div>
+            <div class="mobile-nav__container"></div>
+            <ul class="mobile-nav__contact list-unstyled">
+                <li><i class="fa fa-envelope"></i><a href="mailto:info@nutrisur.com.uy">info@nutrisur.com.uy</a></li>
+                <li><i class="fa fa-phone-alt"></i><a href="tel:+59843358522">(+598) 4335 8522</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <div class="search-popup__content">
+            <form action="#">
+                <label for="search" class="sr-only">Buscar</label>
+                <input type="text" id="search" placeholder="Buscar..." />
+                <button type="submit" aria-label="Buscar" class="thm-btn">
+                    <i class="icon-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ── Scripts ── -->
+    <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="assets/vendors/odometer/odometer.min.js"></script>
+    <script src="assets/vendors/swiper/swiper.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/agrion.js"></script>
+
+    <script>
+        // ── Año dinámico en footer
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+        // ── Pre-seleccionar motivo desde query string (?ficha=nutribroiler)
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            var ficha  = params.get('ficha');
+            if (!ficha) return;
+            var map = {
+                'nutribroiler' : 'fiche-nutribroiler',
+                'nutrilayer'   : 'fiche-nutrilayer',
+                'nutripig'     : 'fiche-nutripig',
+                'nupec'        : 'nupec',
+                'nuterlac'     : 'lechero',
+                'nutriparto'   : 'lechero',
+                'nucleodp18'   : 'lechero',
+                'nutripro'     : 'carne',
+                'nutrifeedlot' : 'carne',
+                'thermoplus'   : 'feed-solutions',
+                'feedsteam'    : 'feed-solutions',
+                'postura'      : 'avicultura'
+            };
+            var sel = document.getElementById('motivo');
+            if (sel && map[ficha]) {
+                sel.value = map[ficha];
+            }
+        })();
+
+        // ── Feedback visual en formulario (complementa agrion.js)
+        (function () {
+            var form    = document.getElementById('ns-contact-form');
+            var success = document.getElementById('form-success');
+            var error   = document.getElementById('form-error');
+            if (!form) return;
+
+            // El template usa jQuery AJAX — agregamos lógica de fallback de UI
+            $(form).on('submit', function () {
+                success.style.display = 'none';
+                error.style.display   = 'none';
+            });
+
+            // Escuchamos el evento custom que dispara agrion.js
+            document.addEventListener('ns:formSent', function (e) {
+                if (e.detail && e.detail.ok) {
+                    success.style.display = 'block';
+                    form.reset();
+                } else {
+                    error.style.display = 'block';
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
