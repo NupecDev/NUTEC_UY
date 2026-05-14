@@ -1,0 +1,19 @@
+{
+    "NUPEC":
+    {
+        "canino":[
+            {"nutricion de mantenimiento":["adulto","cachorro","senior","cachorro raza pequeña","adulto raza pequeña","senior raza pequeña","adulto razas mini","senior razas mini","cachorro razas mini"]},
+            {"nutricion de especialidad":["1st care","high performance","weight control","weight control raza pequeña","sensitive","sensitive raza pequeña","urinary management","digestive health","renal care"]},
+            {"nutricion clinica":["cardiac","hepatic","acute hepatic","hypoallergenic"]},
+            {"premios funcionales":["relax","joint care","digestive care","dental care","smart","training"]},
+            {"alimento humedos":["cachorro","digestive","adulto","weight control","senior"]}
+        ],
+        "felino":[
+            {"nutricion de mantenimiento":["kiten", "adult indoor"]},
+            {"nutricion de especialidad":["weight care","hairball","senior","urinary management","digestive health","renal care"]},
+            {"nutricion clinica":["felino cardiac","felino hepatic","felino hypoallergenic"]},
+            {"alimento humedos":["indoor","kitten","hairball","urinary"]}
+
+        ]       
+    }
+}
