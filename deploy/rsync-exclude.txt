@@ -1,0 +1,10 @@
+# Archivos que NO se suben al servidor
+.git/
+.github/
+.gitignore
+.gitattributes
+.DS_Store
+deploy/
+trash/
+*.xlsx
+*.md
